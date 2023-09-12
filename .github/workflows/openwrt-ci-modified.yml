@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2020 KFERMercer
 #
-name: OpenWrt-CI-EA8500
+name: OpenWrt-CI-EA8500-thinckcy
 
 on:
 #  schedule:
@@ -50,7 +50,9 @@ jobs:
           ./scripts/feeds install -a
 
       - name: Generate configuration file
-        run: make defconfig
+        run: |
+          cp ./20230709-minimal.config ./.config
+
 
       - name: Download packages
         run: make download -j16
