@@ -98,9 +98,9 @@ jobs:
           path: ./bin/targets/
    
       - name: Create release
-      id: create_release
-      uses: ncipollo/release-action@v1.12.0
-      with:
+        id: create_release
+        uses: ncipollo/release-action@v1.12.0
+        with:
           name: OpenWRT-EA8500-Lean-thinkcy-${{ env.tag_name }}
           allowUpdates: true
           tag: ${{ env.tag_name }}
