@@ -83,6 +83,7 @@ jobs:
           cp -rf $(find ./bin/targets/ -type f -name "*.bin") ./artifact/firmware/
           cp -rf $(find ./bin/targets/ -type f -name "*squashfs*") ./release/
           cp -rf $(find ./bin/targets/ -type f -name "*.buildinfo") ./release/
+          tar -zcf ./release/Package.tar.gz ./artifact/package/
           
       - name: Upload buildinfo
         uses: actions/upload-artifact@v3
