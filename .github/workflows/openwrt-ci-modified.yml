@@ -54,6 +54,7 @@ jobs:
       - name: Generate configuration file
         run: |
           cp ./20230709-minimal.config ./.config
+          make defconfig
 
 
       - name: Download packages
